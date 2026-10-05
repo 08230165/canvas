@@ -13,9 +13,11 @@ canvas.create_rectangle(
     outline="lightgreen"
 )
 
+# ---------------- MAIN HOUSE ----------------
+
 # House body
 canvas.create_rectangle(
-    150, 180, 450, 350,
+    180, 180, 470, 350,
     fill="lightyellow",
     outline="black",
     width=3
@@ -23,9 +25,9 @@ canvas.create_rectangle(
 
 # Roof
 canvas.create_polygon(
-    120, 180,
-    300, 70,
-    480, 180,
+    150, 180,
+    325, 70,
+    500, 180,
     fill="tomato",
     outline="black",
     width=3
@@ -33,7 +35,7 @@ canvas.create_polygon(
 
 # Door
 canvas.create_rectangle(
-    270, 250, 340, 350,
+    290, 250, 360, 350,
     fill="brown",
     outline="black",
     width=2
@@ -41,35 +43,77 @@ canvas.create_rectangle(
 
 # Door handle
 canvas.create_oval(
-    325, 295, 335, 305,
+    345, 295, 355, 305,
     fill="gold",
     outline="black"
 )
 
 # Left window
 canvas.create_rectangle(
-    180, 220, 245, 275,
+    200, 220, 260, 275,
     fill="lightblue",
     outline="black",
     width=2
 )
 
-# Window lines
-canvas.create_line(212, 220, 212, 275, width=2)
-canvas.create_line(180, 247, 245, 247, width=2)
+canvas.create_line(230, 220, 230, 275, width=2)
+canvas.create_line(200, 247, 260, 247, width=2)
 
 # Right window
 canvas.create_rectangle(
-    365, 220, 430, 275,
+    390, 220, 450, 275,
     fill="lightblue",
     outline="black",
     width=2
 )
 
-canvas.create_line(397, 220, 397, 275, width=2)
-canvas.create_line(365, 247, 430, 247, width=2)
+canvas.create_line(420, 220, 420, 275, width=2)
+canvas.create_line(390, 247, 450, 247, width=2)
 
-# Sun
+# Chimney
+canvas.create_rectangle(
+    390, 100, 430, 155,
+    fill="gray",
+    outline="black"
+)
+
+# ---------------- DOG HOUSE ----------------
+
+# Dog house body
+canvas.create_rectangle(
+    40, 285, 145, 350,
+    fill="orange",
+    outline="black",
+    width=2
+)
+
+# Dog house roof
+canvas.create_polygon(
+    25, 285,
+    92, 235,
+    160, 285,
+    fill="darkred",
+    outline="black",
+    width=2
+)
+
+# Dog house entrance
+canvas.create_oval(
+    60, 300, 120, 350,
+    fill="black",
+    outline="black"
+)
+
+# Dog house name
+canvas.create_text(
+    92, 275,
+    text="DOG",
+    font=("Arial", 11, "bold"),
+    fill="white"
+)
+
+# ---------------- SUN ----------------
+
 canvas.create_oval(
     40, 40, 110, 110,
     fill="yellow",
@@ -77,16 +121,9 @@ canvas.create_oval(
     width=3
 )
 
-# Chimney
-canvas.create_rectangle(
-    370, 95, 410, 155,
-    fill="gray",
-    outline="black"
-)
-
-# House title
+# Title
 canvas.create_text(
-    300, 400,
+    300, 405,
     text="My Colorful House",
     font=("Arial", 20, "bold"),
     fill="darkblue"
